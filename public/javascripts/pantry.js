@@ -9,22 +9,11 @@ $(function () {
     done(function (data) {
       console.log("RECEIVING RESPONSE");
       console.log("DATA", data);
-      $(data).each(function (id, name) {
-        console.log("RECEIVING RESPONSE");
-        console.log("DATA", data);
+      $(data).each(function (index, food) {
         // var $todo = $("<div class='todo'>" + todo.title + "</div>");
-        var $foods = $("<div class='foody'>" + foods.title + "  " + foods.description + "</div>");
-        $(".foodscon").append($todo);
+        var $food = $("<div class='foody'>" + food.name + "  " + food.yumminess + "</div>");
+        $(".foodscon").append($food);
       });
     });
 
-  //   $("#newTodo").on("submit", function (e) {
-  //     var $this = $(this);
-  //     var formData = $this.serialize();
-  //     console.log(formData);
-  //     $.post("/todos", formData).
-  //     done(function (data) {
-  //       console.log("Success!");
-  //     });
-  //   });
 });
