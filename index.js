@@ -24,10 +24,11 @@ var foods =[
 ];
  
 // ROUTES //
- 
+ var views = path.join(process.cwd(), "views");
 // root path
 app.get("/", function (req, res){
   // render index.html
+  var homePath = path.join(views, "index.html");
   res.sendFile(path.join(__dirname + '/public/views/index.html'));
 });
  
@@ -35,7 +36,7 @@ app.get("/", function (req, res){
 app.get("/foods", function (req, res){
   // render foods index as JSON
   // res.send(JSON.stringify(foods));
-  res.send((foods));
+  res.send(foods);
 });
  
 app.post("/foods", function (req, res){

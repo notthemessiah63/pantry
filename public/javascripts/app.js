@@ -1,10 +1,4 @@
 $(function () {
-  $.get("/").
-    done(function (data) {
-      console.log("RECEIVING RESPONSE");
-      console.log("DATA", data);
-    })
-
   $.get("/foods").
     done(function (data) {
       console.log("RECEIVING RESPONSE");
