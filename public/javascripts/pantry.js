@@ -9,7 +9,7 @@ $(function () {
     done(function (data) {
       console.log("RECEIVING RESPONSE");
       console.log("DATA", data);
-      $(data).each(function (index, food) {
+      $(data).each(function (id, name) {
         console.log("RECEIVING RESPONSE");
         console.log("DATA", data);
         // var $todo = $("<div class='todo'>" + todo.title + "</div>");
